@@ -25,30 +25,29 @@
 >
 public class Product
 {
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-
-    public Product(string name, decimal price)
-    {
-        Name = name;
-        Price = price;
-    }
+public string Name { get; set; }
+public decimal Price { get; set; }
+public Product(string name, decimal price)
+{
+Name = name;
+Price = price;
+}
 }
 >
-    *Класс "Cart":
+*Класс "Cart":
 Определяет корзину покупок, содержащую список добавленных продуктов.
 >
 public class Cart
 {
-    private static List<Product> items = new List<Product>();
-    public static void AddItem(Product product)
-    {
-        items.Add(product);
-    }
-    public static List<Product> GetItems()
-    {
-        return items;
-    }
+private static List<Product> items = new List<Product>();
+public static void AddItem(Product product)
+{
+items.Add(product);
+}
+public static List<Product> GetItems()
+{
+return items;
+}
 }
 >
     *Класс "database":
@@ -56,25 +55,21 @@ public class Cart
 >
 internal class database
 {
-    MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=project708");
-
-    public void openconnection()
-    {
-        if (connection.State == System.Data.ConnectionState.Closed)
-            connection.Open();
-    }
-
-    public void closeconnection()
-    {
-        if (connection.State == System.Data.ConnectionState.Open)
-            connection.Close();
-    }
-
-    public MySqlConnection getConnection() 
-    {
-        return connection;
-    }
-
+MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=project708");
+public void openconnection()
+{
+if (connection.State == System.Data.ConnectionState.Closed)
+connection.Open();
+}
+public void closeconnection()
+{
+if (connection.State == System.Data.ConnectionState.Open)
+connection.Close();
+}
+public MySqlConnection getConnection() 
+{
+return connection;
+}
 }
 >
 
