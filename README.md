@@ -22,7 +22,7 @@
 
 *Класс "Product":
 Описывает продукт с его названием и ценой.
-<
+>
 public class Product
 {
     public string Name { get; set; }
@@ -34,10 +34,10 @@ public class Product
         Price = price;
     }
 }
- >
+>
     *Класс "Cart":
 Определяет корзину покупок, содержащую список добавленных продуктов.
-<
+>
 public class Cart
 {
     private static List<Product> items = new List<Product>();
@@ -50,10 +50,10 @@ public class Cart
         return items;
     }
 }
- >
+>
     *Класс "database":
 Обеспечивает подключение к базе данных MySQL и выполнение запросов.
-<
+>
 internal class database
 {
     MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=project708");
@@ -76,7 +76,7 @@ internal class database
     }
 
 }
- >
+>
 
     #4. Основной функционал:
 ========================
